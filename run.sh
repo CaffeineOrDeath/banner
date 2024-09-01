@@ -1,5 +1,8 @@
 #! /bin/bash
 
-main="$PWD/cmd/server/main.go"
+main="$PWD/cmd/server/"
+tmp="$GOPATH/bin/templ"
 
-go run $main
+$tmp generate
+
+go run $main/main.go

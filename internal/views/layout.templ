@@ -1,20 +1,22 @@
 package views
 
+import (
+    "github.com/CaffeineOrDeath/banner-gen/internal/views/components"
+)
 templ Layout( title string ){
     <!DOCTYPE html>
     <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>{ title }</title>
-            <link rel="stylesheet" href="./style.css">
-            <link rel="icon" href="./static/favicon.ico" type="image/x-icon">
-            <script src="https://unpkg.com/htmx.org@2.0.2"></script>
-        </head>
+    // all the meta tags
+    @components.Header(title)
+    @components.Img()
+        // start content
         <body>
-            { children... }
+
+            @components.Color()
+            @components.Font()
+            @components.Size()
         </body>
-        <footer>
-        </footer>
+        // copyright
+        @components.Footer()
     </html>
 }
