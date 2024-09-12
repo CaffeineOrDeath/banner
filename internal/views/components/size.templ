@@ -1,5 +1,10 @@
 package components
 
-templ Size(){
-    <label>Size</label>
+templ Sizer(){
+    <div>
+        <label>Size</label>
+            <input id="width" type="number" method="POST" hx-post="/"
+            hx-select="#mutcan" hx-swap="outerHTML">Width</input><br>
+            <input id="height" type="number">Height</input>
+    </div>
 }

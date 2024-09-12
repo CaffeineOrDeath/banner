@@ -1,0 +1,18 @@
+package components
+
+templ Canvas(){
+    <canvas id="mutcan"/>
+    <script type="text/javascript">
+        window.onload = buildCanvas;
+
+        function buildCanvas(){
+            const content = document.getElementById("mutcan");
+            let w = document.getElementById("width").value;
+            let h = document.getElementById("height").value;
+            
+            content.setAttribute(width, w);
+            content.setAttribute(height, h);
+            console.log($"Width: {content.width}, Height: {content.height}");
+        }
+    </script>
+}

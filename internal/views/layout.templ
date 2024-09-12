@@ -3,20 +3,25 @@ package views
 import (
     "github.com/CaffeineOrDeath/banner-gen/internal/views/components"
 )
+
 templ Layout( title string ){
     <!DOCTYPE html>
     <html lang="en">
     // all the meta tags
     @components.Header(title)
-    @components.Img()
         // start content
-        <body>
-
-            @components.Color()
-            @components.Font()
-            @components.Size()
+        <body style="display: grid; grid-template-columns: 4; grid-template-rows: 4;">
+            <div style="grid-column: 1; grid-row: 1">
+                @components.Color()
+            </div>
+            <div style="grid-column: 2 / 4; grid-row: 2 / 4;">
+               @components.Canvas()
+            </div>
+            <div style="grid-column: 4; grid-row: 1;">
+                @components.Sizer()
+            </div>
         </body>
-        // copyright
         @components.Footer()
     </html>
 }
+
