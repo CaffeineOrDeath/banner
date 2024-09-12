@@ -1,4 +1,5 @@
-# Banner Gen
+# Banner Gen [WIP]
+## NOT FUNCTIONAL
 
 This is a clone of [Banner Generator](https://github.com/christopherkade/banner-generator).
 The idea, from my perspective, is tackle it from a Data Orientented approach.
